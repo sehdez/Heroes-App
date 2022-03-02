@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
 export class AuthService {
   
       // asegurarse de que se haya importado des de environment nada más sin el '/prod'
-    private baseUrl: string  = environment.baseUrl;
+    private baseUrl: string  = "https://heroesapp-f5f85-default-rtdb.firebaseio.com";
     private _auth: Auth| undefined;
 
     get auth(): Auth{

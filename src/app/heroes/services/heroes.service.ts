@@ -11,7 +11,7 @@ import { Auth } from '../../auth/interfaces/auth.interfaces';
 })
 export class HeroesService {
 
-  private baseUrl: string = environment.baseUrl;
+  private baseUrl: string = "https://heroesapp-f5f85-default-rtdb.firebaseio.com";
   private _auth: Auth| undefined;
 
     get auth(): Auth{
