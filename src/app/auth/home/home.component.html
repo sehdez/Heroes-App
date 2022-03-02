@@ -1,0 +1,63 @@
+<mat-sidenav-container fullscreen > 
+    <mat-sidenav #sidenav mode ="push">
+        <mat-toolbar>
+            <span>Menú</span>
+            <span class="spacer"></span>
+            <button mat-icon-button 
+                    (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>menu</mat-icon>
+            </button>   
+           
+    
+        </mat-toolbar>
+
+        <mat-nav-list>
+            <a routerLink= "../login"
+                mat-list-item
+                (click)="sidenav.toggle()" >
+                <mat-icon mat-list-icon>arrow_forward</mat-icon>
+                <span>Iniciar Sesión</span>
+            </a>
+        
+            <a routerLink= "./registro"
+                mat-list-item
+                (click)="sidenav.toggle()" >
+                <mat-icon mat-list-icon >build</mat-icon>
+                <span>Registrarse</span>
+            </a>
+
+            <a routerLink= "../heroes"
+                mat-list-item
+                (click)="sidenav.toggle()" >
+                <mat-icon mat-list-icon >directions_run</mat-icon>
+                <span>Ver Héroes</span>
+            </a>
+
+        </mat-nav-list>
+
+
+    </mat-sidenav>
+
+    <mat-toolbar>
+        <button mat-icon-button 
+                (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button> 
+
+    </mat-toolbar>
+        <div fxFlexAlign="center"
+            fxFlex.xs ="80" 
+            fxFlex.sm="50"
+            class="box"> 
+
+            <mat-card>
+                <router-outlet></router-outlet>
+            </mat-card>
+
+        </div>
+
+  
+
+
+    
+</mat-sidenav-container>

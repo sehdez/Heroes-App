@@ -1,0 +1,40 @@
+<mat-card-title>
+    Iniciar Sesión:
+</mat-card-title><br>
+<mat-divider></mat-divider><br>
+<form action="submit" [formGroup]="miFormulario">
+    <mat-form-field class="caja">
+            
+        <mat-label>Usuario</mat-label>
+        <input matInput
+                autocomplete="off"
+                type="text"
+                formControlName="user">
+    </mat-form-field> 
+    <br>
+    <mat-form-field class="caja" >
+        <mat-label>Contraseña</mat-label>
+        <input matInput  
+                autocomplete="off"
+                formControlName="psw"
+                type="password"
+                >
+        </mat-form-field>
+        <br>
+        <mat-card-content color="warn" >Si no cuentas con un usuario, puedes darle click al 
+                          botón de registrarse para crear uno.
+        </mat-card-content>
+    <button type="submit" mat-raised-button 
+            [disabled]="this.miFormulario.invalid"
+            color="primary" (click)="login()">
+        Ingresar
+    </button>
+    <button class="r" type="button" mat-raised-button 
+            color="accent" routerLink="../registro">
+        Registrase
+    </button>
+</form>
+       
+
+
+
