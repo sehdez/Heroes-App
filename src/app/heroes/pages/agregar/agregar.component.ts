@@ -67,7 +67,6 @@ export class AgregarComponent implements OnInit {
         switchMap( ({ id }) => this.heroesService.getHeroePorId( id ) )
       )
       .subscribe( heroe => this.heroe = heroe );
-      console.log(this.heroe.alt_img);
 
   }
 

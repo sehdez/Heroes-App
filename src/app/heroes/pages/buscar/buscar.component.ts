@@ -31,13 +31,11 @@ export class BuscarComponent implements OnInit {
             let heroe :Heroe = heroes[i];
             this.heroes.push(heroe)    
         }
-        console.log(this.heroes);
-        this.termino.toLocaleLowerCase();
         this.heroesFiltrados=[];
         this.heroes.forEach( heroe => {
           const heroeLower = heroe.superhero?.toLowerCase();
-          console.log(heroeLower);
-          if ( heroeLower.indexOf(this.termino) >=0 && this.heroesFiltrados.length <5){
+          
+          if ( heroeLower.indexOf(this.termino.toLowerCase()) >=0 && this.heroesFiltrados.length <5){
             this.heroesFiltrados.push(heroe)
           }
         })
@@ -54,9 +52,5 @@ export class BuscarComponent implements OnInit {
     this.heroesService.getHeroePorId( heroe.id! )
       .subscribe( heroe=> this.heroeSeleccionado = heroe );
   }
-
-  
-
-
 
 }

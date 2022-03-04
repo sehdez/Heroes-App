@@ -34,7 +34,6 @@ export class HeroeComponent implements OnInit {
           switchMap( ( { id } ) => this.heroesService.getHeroePorId (id) ),
       )
       .subscribe(  heroe => this.heroe = heroe);
-      console.log(this.heroe)
     }
 
     regresar(){
